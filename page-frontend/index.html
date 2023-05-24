@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/main.css">
+    <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Swiper CSS/JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script defer src="./js/swiper.js"></script>
+    
+
 </head>
 <body>
     
@@ -18,12 +22,12 @@
         <div class="prenav-container">
             <nav class="navigation-menu animate__animated animate__fadeInLeft">
                 <a href="">Ropa</a>
-                <a href="">Sobre nosostros</a>
+                <a href="#sobrenosotros">Sobre nosostros</a>
                 <a href="">Mostrar mas</a>
             </nav>
             <div class="login-container animate__animated animate__fadeInRight">
                 <i class="fa-solid fa-user"></i>
-                <h3>Login</h3>
+                <h3><a href="../page-frontend/admin/index.html"> Admin </a></h3>
             </div>
         </div>
         <div class="input-container animate__animated animate__fadeInLeft">
@@ -35,42 +39,71 @@
     </header>
 
     <main>
-        <article class="filter-container">
-
+        <article class="about-us-container"  id="sobrenosotros">
+            <aside class="aside1">
+                <img src="./img/Logo/AthleticXpress-logos_transparent.png" alt="">
+                <div class="info-container animate__animated animate__fadeInLeft">
+                    <h1> <u>Sobre Nosotros</u></h1>
+                    <h3>Bienvenidos a la página Oficial de "AthleticXpress", somos una tienda de ropa deportiva que acaba de abrir.</h3>
+                    <h3>Estamos ubicados en Palma de Mallorca, mas concretamente en la <u><a href="https://www.google.com/maps?q=pla%C3%A7a+del+rosari&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjI6p32mY7_AhWrh_0HHRKwBAsQ_AUoAXoECAEQAw">  Plaça del Rosari </a></u> Cerca del centro.</h3>
+                    <h3>En nuestar tienda podrás encontrar todo tipo de Ropa deportiva, ya sea para ir a correr, gimnaso... Deportes en general, como ropa para ir a practicar deportes de nieve...</h3>
+                </div>
+            </aside>
+            <aside class="aside2 animate__animated animate__fadeInLeft">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="./img/Oferta4.avif" alt=""></div>
+                      <div class="swiper-slide"><img src="./img/Oferta2.jpg" alt=""></div>
+                      <div class="swiper-slide"><img src="./img/Oferta5v2.png" alt=""></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+            </aside>
         </article>
-        <article class="article-container">
 
-        </article>
+        <div class="main-container animate__animated animate__fadeInLeft">
+            <article class="filter-container">
+
+            </article>
+            <article class="article-container">
+
+            </article>
+        </div>
     </main>
 
-    <footer class="footer-container" style="display: flex; justify-content: space-evenly; background-color: black; color: white;">
+    <footer class="footer-container animate__animated animate__fadeInLeft">
         <div>
-            <a href="">AAA</a>
-            <a href="">BBB</a>
-            <a href="">BBB</a>
-            <a href="">CCC</a>
-            <a href="">AAA</a>
-            <a href="">BBB</a>
+            <ul>
+                <li><a href="">AAA</a></li>
+                <li><a href="">BBB</a></li>
+                <li><a href="">BBB</a></li>
+            </ul>
         </div>
         <div>
-            <a href="">AAA</a>
-            <a href="">BBB</a>
-            <a href="">BBB</a>
-            <a href="">CCC</a>
-            <a href="">AAA</a>
-            <a href="">BBB</a>
+            <ul>
+                <li><a href="">AAA</a></li>
+                <li><a href="">BBB</a></li>
+                <li><a href="">BBB</a></li>
+            </ul>
         </div>
-        <div class="socialmedia" style="display: flex; flex-direction: column; justify-content: space-evenly;">
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-whatsapp"></i>
-            <i class="fa-brands fa-discord"></i>
-            <div style="display: flex; align-items: center;">
-                <i class="fa-solid fa-phone"></i>
-                <p>#35 671 67 89 03</p>
-            </div>
+        <div>
+            <ul>
+                <li><a href="">AAA</a></li>
+                <li><a href="">BBB</a></li>
+                <li><a href="">BBB</a></li>
+            </ul>
         </div>
-
+        <div class="social-media">
+            <i class="fa-brands fa-twitter"> <p>AthleticXpress</p> </i>
+            <i class="fa-brands fa-instagram"> <p>AthleticXpress</p></i>
+            <i class="fa-brands fa-whatsapp"> <p> + 34 <u>671 56 56 43</u></p></i>
+            <i class="fa-brands fa-discord"> <p>AthXpress </p></i>
+            <i class="fa-solid fa-phone"> <p> + 34 <u>671 67 89 03</u></p></i>
+        </div>
+    
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     </footer>
 
 </body>

@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;1,700&display=swap');
 
 body{
-    margin: 0;
+    margin: 20px;
     padding: 0;
     font-family: 'Lato', sans-serif;
     scroll-behavior: smooth;
+    background: rgb(128,128,128);
+    background: linear-gradient(90deg, rgba(128,128,128,1) 0%, rgba(223,226,226,1) 58%);
 }
 
 .cabecera{
@@ -13,6 +15,9 @@ body{
     background-image: url(../img/Cabecera.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    border: 1px solid black;
 }
 
 .prenav-container{
@@ -29,7 +34,8 @@ body{
 .login-container{
     align-items: center;
     display: flex;
-    margin-right: 40px;
+    padding-right: 40px;
+    margin-right: 10px;
     height: 35px;
     width: 6%;
     text-align: center;
@@ -44,6 +50,15 @@ body{
     box-shadow: 5px 5px 6px rgb(46, 46, 46);
 }
 
+.login-container a{
+    text-decoration: none;
+    color: black;
+}
+
+.login-container a:hover{
+    color: white;
+    transition: 0.4s;
+}
 
 .navigation-menu{
     position: relative;
@@ -66,9 +81,10 @@ body{
 }
 
 .navigation-menu a:hover{
-    color:  rgb(77, 76, 76);
+    color: black;
     transition: 0.3s;
     text-shadow: 3px 3px 3px grey;
+    text-decoration: underline;
 }
 
 .input-container{
@@ -79,7 +95,7 @@ body{
 }
 
 .input-container input{
-    width: 600px;
+    width: 400px;
     height: 40px;
     border-radius: 10px;
     border: 1px solid gray;
@@ -87,7 +103,153 @@ body{
 }
 
 .footer{
-    width: 100%;
-   position: relative;
+   width: 100%;
    top: 1000px;
 }
+
+.about-us-container{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 10px;
+    margin-bottom: 20px;
+    height: 450px;
+}
+
+.info-container{
+    width: 80%;
+    margin: auto;
+}
+
+.info-container h1{
+    background-color: gray;
+    color: white;
+    border-radius: 20px;
+    height: 40px;
+    align-items: center;
+    padding-top: 11px;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    border: 1.5px solid black;
+}
+
+.aside1{
+    background-color: beige;
+    border-radius: 15px;
+    height: 450px;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgb(73, 73, 73);
+}
+
+.aside1 a{
+    position: relative;
+    text-decoration: none;
+    color: rgb(252, 86, 86);
+}
+
+.aside1 img{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 90px;
+    left: 180px;
+    opacity: 0.2;
+}
+
+.aside1:hover{
+    box-shadow: 5px 5px 10px rgb(112, 112, 112);
+    transition: 0.3s;
+}
+
+.aside2{
+    background-color: rgb(158, 157, 157);
+    border-radius: 15px;
+    height: 450px
+}
+
+.aside2:hover{
+    box-shadow: 5px 5px 10px rgb(112, 112, 112);
+    transition: 0.3s;
+}
+
+.swiper{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.swiper-wrapper img{
+    width: 100%;
+    height: 100%;
+}
+
+.main-container{
+    display: grid;
+    grid-template-areas: "aside articles articles articles";
+    height: 1000px;
+    margin-bottom: 40px;
+    border: 1px solid black;
+}
+
+.filter-container{
+    grid-area: aside;
+    background-color: white;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.article-container{
+    grid-area: articles;
+    background-color: rgb(112, 112, 112);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+
+
+.footer-container{
+    display: flex;  
+    justify-content: space-around; 
+    background-color: black; 
+    color: white;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px black;
+}
+
+.footer-container div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-container div ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.footer-container div {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container div ul li{
+    padding-top: 20px;
+}
+
+.footer-container div ul li:first-child{
+    padding-top: 0px;
+}
+
+.social-media i{
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.social-media i p{
+    font-size: 10px;
+    padding-left: 5px;
+}
+
