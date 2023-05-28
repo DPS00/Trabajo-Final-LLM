@@ -7,7 +7,7 @@ const clothesSchema = new Schema({
         required: true, 
         unique: true
     }, 
-    price: {
+    precio: {
         type: String,
         required: true
     },
@@ -15,7 +15,7 @@ const clothesSchema = new Schema({
         type: String,
         required: true
     },
-    description:{
+    descripcion:{
         type: String,
     },
     img:{

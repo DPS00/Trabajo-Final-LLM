@@ -3,12 +3,14 @@ import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import cors from "cors";
 
-import bookRoutes from "./routes/bookRoutes.js";
+import clothesRoutes from "./routes/clothesRoutes.js";
+import categoriesRoutes from "./routes/categoriesRoutes.js";
+import usersRoutes from "./routes/usersRoutes.js";
 
 
 // Conexión BD
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://127.0.0.1:27017/libraryDB');
+mongoose.connect('mongodb://127.0.0.1:27017/gestoclothes');
 
 const app = express();
 app.use(express.json());
@@ -21,7 +23,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());
 
 // Rutas
-app.use("/api", bookRoutes);
+app.use("/api", clothesRoutes);
+app.use("/api", categoriesRoutes);
+app.use("/api", usersRoutes);
 
 // Puerto
 app.listen(8800, () => {

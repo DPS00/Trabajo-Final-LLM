@@ -1,0 +1,38 @@
+.card{
+    max-width: 33%;
+    display: grid;
+    grid-template-columns: repeat(3 auto);
+    border: 2px solid black;
+    border-radius: 15px;
+    align-items: center;
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 60px;
+    box-shadow: 5px 5px 10px grey;
+}
+
+.card img{
+    width: 95%;
+    border-radius: 15px;
+    height: 380px;
+    margin: auto;
+    margin-top: 20px;
+    border: 2px solid black;
+}
+
+.card .precios{
+    display: flex;
+    gap: 10px;
+}
+
+
+
+.card h2{
+    width: 100%;
+    background-color: white;
+    margin-bottom: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top: 1px solid black;
+}
+

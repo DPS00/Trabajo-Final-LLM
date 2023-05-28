@@ -5,6 +5,8 @@ export const mostrarClothes = async (req, res) => {
     try {
         // obtener todos los cursos
         const documents = await Clothes.find({})
+                          .populate("category");
+
         res.json(documents);
     } catch (error) {
         console.log(error);
@@ -15,7 +17,7 @@ export const searchClothes = async (req, res) => {
     try {
         // obtener el query de la URL
         const { query } = req.params;
-        const documents = await Clothes.find({ title: new RegExp(query, 'i') })
+        const documents = await Clothes.find({ name: new RegExp(query, 'i') })
         res.json(documents);
     } catch (error) {
         console.log(error);
@@ -49,13 +51,13 @@ export const searchClothesByCategory = async (req, res) => {
     }
 };
 
-// Agrega un nuevo curso
+// Agrega una nueva prenda
 export const nuevoClothes = async (req, res) => {
     const document = new Clothes(req.body);
     try {
         // almacenar el registro
         await document.save();
-        res.json({ mensaje : 'Se agrego un nuevo curso' });
+        res.json({ mensaje : 'Se agrego una nueva prenda' });
     } catch (error) {
         // si hay un error, console.log
         res.send(error);
