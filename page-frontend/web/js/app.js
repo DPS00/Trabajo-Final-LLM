@@ -1,4 +1,7 @@
+import ClotheService from "../../admin/js/services/ClotheService";
 const grid = document.querySelector('#article-container');
+const inputName = document.querySelector('#input-name')
+
 
 const getClothes = () => {
     fetch("http://localhost:8800/api/clothes")
@@ -26,9 +29,45 @@ const printClothes = (clothes) => {
             </div>
         `;
     });
+
+    
+
+
+const searchClothe = (event) => {
+    event.preventDefault();
+    const input = event.target;
+    if (input.value.length >= 3) {
+        let nameSearch = input.value.toLowerCase();
+        renderClothes(nameSearch);
+    } else if (input.value.length == 0) {
+        renderClothes();
+    }
 }
+
+const renderClothes = (searchValue) => {
+    listContainer.innerHTML = "";
+    if (searchValue) {
+        loadingObj.open();
+        ClotheService.searchItemByName(searchValue)
+            .then(items => {
+                printClothes(items);
+            }).finally(() => {
+                loadingObj.close();
+            });
+    } else {
+        loadingObj.open();
+        ClotheService.getItemsList()
+            .then(items => {
+                printClothes(items);
+            }).finally(() => {
+                loadingObj.close();
+            });
+    }
+}};
 
 function init() {
     getClothes();
+    renderClothes();
+    inputName.addEventListener("keyup", searchClothe);
 }
 init();

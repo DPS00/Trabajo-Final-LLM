@@ -12,19 +12,19 @@ const form = document.querySelector('#frm-item');
 const inputSearch = document.querySelector("#input-search");
 const loadingObj = new Loading("modal-message", "Loading...")
 const inputName = document.querySelector('#field-name');
-const inputPrice = document.querySelector('#field-price');
-const inputPegi = document.querySelector('#field-pegi');
+const inputPrecio = document.querySelector('#field-precio');
 
 let currentClothe = null;
 
 const newClothe = () => {
     const name = document.querySelector('#field-name').value;
     const brand = document.querySelector('#field-brand').value;
-    const price = document.querySelector('#field-price').value;
+    const precio = document.querySelector('#field-precio').value;
     const descripcion = document.querySelector('#field-descripcion').value;
     const category = document.querySelector('#field-category').value;
+    const image = document.querySelector('#field-image').value;
     
-    const clothe = {name, brand, price, descripcion, category};
+    const clothe = {name, brand, precio, descripcion, category, image};
     console.log("clothe", clothe);
     loadingObj.open();
     ClotheService.insert(clothe).then(data => {
@@ -39,16 +39,18 @@ const newClothe = () => {
 
 const actualizarClothes = (id) => {
     ClotheService.getItemById(id).then(data => {
+        alert(data.name);
         currentClothe = data;
         document.querySelector('#field-name').value = data.name;
         document.querySelector('#field-brand').value = data.brand;
         document.querySelector('#field-descripcion').value = data.descripcion;
-        document.querySelector('#field-price').value = data.precio;
+        document.querySelector('#field-precio').value = data.precio;
         document.querySelector('#field-category').value = data.category;
+        document.querySelector('#field-image').value = data.img;
         let option =document.querySelector(`#field-category option[value*='${data.category}']`);
         if(option) option.selected=true;
         document.querySelector('#field-descripcion').value = data.descripcion;
-        //country
+        
     });
     btnInsert.classList.replace("d-inline", "d-none");
     btnUpdate.classList.replace("d-none", "d-inline");
@@ -59,11 +61,12 @@ const actualizarClothes = (id) => {
 const updateClothe = () => {
     const name = document.querySelector('#field-name').value;
     const brand = document.querySelector('#field-brand').value;
-    const price = document.querySelector('#field-price').value;
+    const precio = document.querySelector('#field-precio').value;
     const descripcion = document.querySelector('#field-descripcion').value;
     const category = document.querySelector('#field-category').value;
+    const image = document.querySelector('#field-image').value;
     
-    const clothe = {name, brand, price, descripcion, category};
+    const clothe = {name, brand, precio, descripcion, category, image};
 
     ClotheService.update(clothe).then(data => {
         currentClothe = null;
@@ -93,7 +96,7 @@ const populateClothes = (items) => {
                 <td>${i + 1}</td>
                 <td>${e.name}</td>
                 <td>${e.brand}</td>
-                <td>${e.price}</td>
+                <td>${e.precio}</td>
                 <td>${e.descripcion}</td>
                 <td>${e.category.name}</td>
                 <td class="text-center">
@@ -151,14 +154,9 @@ const validateForm = (event) => {
         inputName.focus();
         return false;
     }
-    if(!inputPrice.validity.valid) {
+    if(!inputPrecio.validity.valid) {
         alert("Precio incorrecto");
-        inputPrice.focus();
-        return false;
-    }
-    if(!inputPegi.validity.valid) {
-        alert("Pegi incorrecto");
-        inputPegi.focus();
+        inputPrecio.focus();
         return false;
     }
     //Execute insert or update depends to button name 

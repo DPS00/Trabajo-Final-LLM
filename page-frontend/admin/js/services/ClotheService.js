@@ -19,7 +19,7 @@ export default class Clotheservice {
     }
 
     static searchItemByName(name) {
-        return fetch(`${this.URL_API}/search/name/${name}`)
+        return fetch(`${this.URL_API}/search/${name}`)
             .then(res => res.json())
             .catch(error => error);
     }
