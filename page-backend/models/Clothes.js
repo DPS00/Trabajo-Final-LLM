@@ -8,7 +8,7 @@ const clothesSchema = new Schema({
         unique: true
     }, 
     precio: {
-        type: String,
+        type: Number,
         required: true
     },
     brand: {
@@ -28,6 +28,12 @@ const clothesSchema = new Schema({
 }, 
 { versionKey: false }
 );
+
+clothesSchema.set('toJSON', {
+    virtuals: true,
+    versionKey:false,
+    transform: function (doc, ret) {   delete ret._id  }
+});
 
 const Clothes = mongoose.model('Clothes', clothesSchema);
 export default Clothes;

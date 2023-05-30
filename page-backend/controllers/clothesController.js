@@ -13,6 +13,14 @@ export const mostrarClothes = async (req, res) => {
     }
 };
 
+export const showClothesyById = async (req, res) => {
+    const document = await Clothes.findById(req.params.idClothes);
+    if(!document) {
+        res.json({message : 'Category no exists'});
+    }
+    res.json(document);
+};
+
 export const searchClothes = async (req, res) => {
     try {
         // obtener el query de la URL
