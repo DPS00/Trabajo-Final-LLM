@@ -48,11 +48,11 @@ export const searchClothesPorPrecio = async (req, res) => {
     }
 };
 
-export const searchClothesByCategory = async (req, res) => {
+export const searchClothesByBrand = async (req, res) => {
     try {
-        const documents = await Clothes.find({ category:ObjectId(req.params.idCategory) })
-                                .populate("category");
-            
+        // obtener el query de la URL
+        const { query } = req.params;
+        const documents = await Clothes.find({ brand: new RegExp(query, 'i') })
         res.json(documents);
     } catch (error) {
         console.log(error);
@@ -72,23 +72,16 @@ export const nuevoClothes = async (req, res) => {
     }
 };
 
-// Actualiza un curso via id
 export const actualizarClothes = async (req, res) => {
     try {
-        console.log("Datos a modificar", req.body);
-
         const filter = { _id : req.body.id };
         const update =  req.body;
-        //Opciones, devolver el nuevo objeto modificado
         const options = {new : true};
-
         const document = await Clothes.findOneAndUpdate(filter, update, options);
-        /*const curso = await Clothes.findAndModify({
-            query:filter,
-            update:{nombre:update.nombre, descripcion:update.descripcion},
-            new:true
-        });*/
-        res.json(document);
+        res.json({
+            "message":"Category modified successfuly",
+            ...document
+         });
     } catch (error) {
         res.send(error);
     }

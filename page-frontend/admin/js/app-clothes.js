@@ -22,9 +22,9 @@ const newClothe = () => {
     const precio = document.querySelector('#field-precio').value;
     const descripcion = document.querySelector('#field-descripcion').value;
     const category = document.querySelector('#field-category').value;
-    const image = document.querySelector('#field-image').value;
+    const img = document.querySelector('#field-image').value;
     
-    const clothe = {name, brand, precio, descripcion, category, image};
+    const clothe = {name, brand, precio, descripcion, category, img};
     console.log("clothe", clothe);
     loadingObj.open();
     ClotheService.insert(clothe).then(data => {
@@ -39,7 +39,6 @@ const newClothe = () => {
 
 const actualizarClothes = (id) => {
     ClotheService.getItemById(id).then(data => {
-        alert(data.name);
         currentClothe = data;
         document.querySelector('#field-name').value = data.name;
         document.querySelector('#field-brand').value = data.brand;
@@ -59,14 +58,14 @@ const actualizarClothes = (id) => {
 }
 
 const updateClothe = () => {
+    const id = currentClothe.id;
     const name = document.querySelector('#field-name').value;
     const brand = document.querySelector('#field-brand').value;
     const precio = document.querySelector('#field-precio').value;
     const descripcion = document.querySelector('#field-descripcion').value;
     const category = document.querySelector('#field-category').value;
-    const image = document.querySelector('#field-image').value;
-    
-    const clothe = {name, brand, precio, descripcion, category, image};
+    const img = document.querySelector('#field-image').value;
+    const clothe = {id, name, brand, precio, descripcion, category, img};
 
     ClotheService.update(clothe).then(data => {
         currentClothe = null;

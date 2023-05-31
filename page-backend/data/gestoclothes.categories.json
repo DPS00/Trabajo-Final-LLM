@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "64723bdedc3294b230b04382"
+  },
+  "name": "Shorts",
+  "description": "Categoría creada para juntar todos los pantalones cortos juntoss"
+},
+{
+  "_id": {
+    "$oid": "647392fbe89940a05e43d087"
+  },
+  "name": "Camisetas",
+  "description": "Categoría creada para juntar todas las camisetas juntas"
+},
+{
+  "_id": {
+    "$oid": "64739352e89940a05e43d092"
+  },
+  "name": "Sudaderas",
+  "description": "Categoría creada para juntar todas las sudaderas juntas"
+},
+{
+  "_id": {
+    "$oid": "64764e642257c3725f906a7c"
+  },
+  "name": "Deportivas",
+  "description": "Categoría creada para juntar todas las deportivas juntas"
+}]

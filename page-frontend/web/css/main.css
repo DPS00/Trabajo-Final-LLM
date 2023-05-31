@@ -185,45 +185,33 @@ body{
 }
 
 .main-container{
-    display: flex;
+    width: 100%;
     height: auto;
     margin-bottom: 40px;
-    gap: 10px   ;
+    margin: auto;
+    /* border: 1px solid black; */
 }
 
-.filter-container{
-    background-color: white;
-    border-radius: 15px;
-    border: 2px solid black;
-    flex-basis: 18%;
-}
-
-
-.article-c-container{
-    background-color: rgb(112, 112, 112);
-    border-radius: 15px;
-    border: 2px solid black;
-    flex-basis: 82%;
-}
 
 #article-container{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 
 .filter-inputs{
-    width: 90%;
-    display: flex;
-    margin: auto;
-    gap: 20px;
+    width: 100%;
 }
 
 .filter-inputs input{
-    width: 90%;
+    width: 100%;
     border-radius: 15px;
     margin-top: 15px;
     border: none;
     height: 40px;
+    box-shadow: 5px 5px 10px rgb(83, 83, 83);
+
 }
 
 
@@ -234,7 +222,7 @@ body{
     background-color: black; 
     color: white;
     border-radius: 15px;
-    box-shadow: 2px 2px 5px black;
+    box-shadow: 3px 3px 5px black;
 }
 
 .footer-container div{

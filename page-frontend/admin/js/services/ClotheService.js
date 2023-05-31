@@ -24,6 +24,12 @@ export default class Clotheservice {
             .catch(error => error);
     }
 
+    static searchItemByBrand(brand) {
+        return fetch(`${this.URL_API}/search/${brand}`)
+            .then(res => res.json())
+            .catch(error => error);
+    }
+
     static insert(params) {
         const options = {
             method: 'POST',

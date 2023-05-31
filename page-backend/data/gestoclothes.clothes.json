@@ -1,0 +1,104 @@
+[{
+  "_id": {
+    "$oid": "64723bf0dc3294b230b04384"
+  },
+  "name": "Pantalón Corto Hybrid",
+  "precio": 50,
+  "brand": "Nike",
+  "descripcion": "Los nuevos Nike Hybrid son los pantalones ideales para ejercitarte mientras mantienes un estilo en condiciones",
+  "img": "https://i8.amplience.net/i/jpl/jd_619759_e?qlt=92&w=750&h=957&v=1&fmt=auto",
+  "category": {
+    "$oid": "64723bdedc3294b230b04382"
+  }
+},
+{
+  "_id": {
+    "$oid": "64764eef2257c3725f906a87"
+  },
+  "name": "AirJordan2 Low Melon",
+  "precio": 160,
+  "brand": "Jordan",
+  "descripcion": "Confección italiana con repercusión global. En 1987, las AJ2 sentaron las bases de toda una dinastía de zapatillas y de su paso de la cancha a las pasarelas.",
+  "category": {
+    "$oid": "64764e642257c3725f906a7c"
+  },
+  "img": "https://static.nike.com/a/images/t_prod_sc/w_640,c_limit,f_auto/dae62028-69ff-4689-b82c-98622caae756/fecha-de-lanzamiento-de-las-air-jordan%C2%A02-low-melon-tint-dv9956-118.jpg"
+},
+{
+  "_id": {
+    "$oid": "64766536bfde1467037113ab"
+  },
+  "name": "Sudadera Jordan Brooklyn Fleece",
+  "precio": 75,
+  "brand": "Jordan",
+  "descripcion": "Rinde homenaje a tu orgullo por la marca Jordan y mantén la calidez con esta sudadera con capucha de tejido Fleece supersuave.",
+  "category": {
+    "$oid": "64739352e89940a05e43d092"
+  },
+  "img": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/17245fa0-53f7-4e1a-bcea-39e3210a65c6/jordan-brooklyn-fleece-sudadera-con-capucha-TvTsNR.png"
+},
+{
+  "_id": {
+    "$oid": "6476658cbfde1467037113af"
+  },
+  "name": "Jordan Flight MVP",
+  "precio": 35,
+  "brand": "Jordan",
+  "descripcion": "Ha llegado el verano, vívelo. Esta camiseta de algodón holgada cuenta con un estampado Jordan vintage en la parte posterior, de nuevo.",
+  "category": {
+    "$oid": "647392fbe89940a05e43d087"
+  },
+  "img": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e14e74cf-8c45-424d-a16e-a92da11b9e7a/jordan-flight-mvp-camiseta-con-estampado-NhqcWk.png"
+},
+{
+  "_id": {
+    "$oid": "64766b5ebfde1467037114e0"
+  },
+  "name": "Camiseta Box Back Graphic",
+  "precio": 40,
+  "brand": "North Face",
+  "descripcion": "Agregue un toque listo para el aire libre a sus cortes básicos con esta camiseta Box Back Graphic para hombre de The North Face.",
+  "img": "https://i8.amplience.net/i/jpl/jd_611559_a?qlt=92&w=750&h=957&v=1&fmt=auto",
+  "category": {
+    "$oid": "647392fbe89940a05e43d087"
+  }
+},
+{
+  "_id": {
+    "$oid": "64766d41bfde146703711541"
+  },
+  "name": "Hoodrich pantalón corto OG Mark",
+  "precio": 55,
+  "brand": "Hoodrich",
+  "descripcion": "Lleva el estilo urbano a tus outfits casual con este pantalón corto OG Mark para hombre de Hoodrich. Con el estilo mas novedoso.",
+  "img": "https://i8.amplience.net/i/jpl/jd_657900_b?qlt=92&w=750&h=957&v=1&fmt=auto",
+  "category": {
+    "$oid": "64723bdedc3294b230b04382"
+  }
+},
+{
+  "_id": {
+    "$oid": "64766ddcbfde146703711545"
+  },
+  "name": "Adidas Originals camiseta Essential",
+  "precio": 28,
+  "brand": "Adidas",
+  "descripcion": "Refresca tu estilo cotidiano con esta playera Essential Boyfriend para mujer de adidas Originals. En una combinación de colores naranja y blanco.",
+  "img": "https://i8.amplience.net/i/jpl/jd_637282_b?qlt=92&w=750&h=957&v=1&fmt=auto",
+  "category": {
+    "$oid": "647392fbe89940a05e43d087"
+  }
+},
+{
+  "_id": {
+    "$oid": "64766e65bfde146703711549"
+  },
+  "name": "Hoodrich camiseta Intel Slim",
+  "precio": 28,
+  "brand": "Hoodrich",
+  "descripcion": "Refresca tus productos básicos diarios con esta camiseta delgada Intel para mujer de Hoodrich. Con el estilo mas novedoso.",
+  "img": "https://i8.amplience.net/i/jpl/jd_644051_a?qlt=92&w=750&h=957&v=1&fmt=auto",
+  "category": {
+    "$oid": "647392fbe89940a05e43d087"
+  }
+}]
