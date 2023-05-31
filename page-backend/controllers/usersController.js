@@ -64,7 +64,7 @@ export const loginUser = async (req, res) => {
         if (!email || !password) {
             res.status(400).json({
                 error: true,
-                message: "All input is required"
+                message: "Inserte todos los campos"
             });
             return;
         }
@@ -88,21 +88,21 @@ export const loginUser = async (req, res) => {
                     // La contraseña no es válida
                     res.status(400).json({
                         error: true,
-                        message: "Invalid Credentials"
+                        message: "Contraseña Invalida"
                     });
                 }
             } else {
                 // No se encontró la propiedad password en el objeto user
                 res.status(400).json({
                     error: true,
-                    message: "Invalid Credentialss"
+                    message: "No existe la propiedad password"
                 });
             }
         } else {
             // El usuario no existe
             res.status(400).json({
                 error: true,
-                message: "Invalid Credentialsss"
+                message: "El usuario no existe"
             });
         }
     } catch (err) {
